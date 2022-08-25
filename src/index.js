@@ -18,6 +18,6 @@ app.set('view engine', 'ejs');
 app.use(indexRoutes);
 app.use(express.static(join(__dirname, 'public')));
 
-
-app.listen(3005);
-console.log('Server is listening on http://localhost:3005');
+const puerto = process.env.PORT || 3005
+app.listen(puerto);
+console.log('Server is listening on port ', puerto);
